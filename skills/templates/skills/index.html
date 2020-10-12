@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>   
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for skill in skill_list %}
+            <tr>
+                <td>{{skill.name}}</td>
+                <td>{{skill.type}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </body>
+</html>

@@ -47,8 +47,8 @@ h1,h2,h3 {
 
 .item:nth-child(1) {
     width: 100%;
-    position: relative;
-    top: 30%;
+    /* position: relative;
+    top: 30%; */
 }
 .portrait_img {
     height: 80px;

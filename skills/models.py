@@ -12,7 +12,12 @@ class Skill(models.Model):
         DATABASE  = 3
 
     type = models.IntegerField(choices=Type.choices)
-    image = models.ImageField(upload_to='img', blank=True)
+    image = models.ImageField(null=True, blank=True, upload_to='img')
 
     def __str__(self):
         return self.name
+
+    @property
+    def image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url

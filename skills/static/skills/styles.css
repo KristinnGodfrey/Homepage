@@ -94,17 +94,23 @@ span.purple {
     /* position: relative;
     top: 30%; */
 }
+.item:nth-child(4) p{
+    text-align: right;
+}
 .item:nth-child(5) {
     width: 100%;
     /* position: relative;
     top: 30%; */
 }
 .item:nth-child(6) {
-    width: 33%;
+    width: 45%;
 }
-.item:nth-child(7) {
-    width: 20%; 
-}  
+.item:nth-child(7) {    
+    width: 55%; 
+} 
+.item:nth-child(7) p {
+    text-align:right;
+}   
 .skill {
     height: 27px;    
     padding-right: 45px;

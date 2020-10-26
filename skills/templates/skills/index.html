@@ -7,6 +7,7 @@
     <link rel="stylesheet" href=" {% static 'skills/styles.css' %} ">    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+     <script src="{% static 'skills/scripts.js' %}"></script> 
   </head>
   <body>       
     <div class="outside">
@@ -16,46 +17,46 @@
         </div>
                  
         {% for project in projects %}
-        <div class="item"> 
+        <div class="item left"> 
           <h3 class="center">  {{project.skill_id}} project </h3>
         </div>   
-        <div class="item">    
+        <div class="item left">    
           <p> {{project.name}} </p>
         </div>
-        <div class="item">   
+        <div class="item left">   
           <p> {{project.description}} </p>
         </div>          
-        <div class="item">   
+        <div class="item left">   
           <img class="big_img" src="{{project.image_url}}">
         </div> 
-        <div class="item">   
+        <div class="item left">   
           <p> {{project.date}} </p>
         </div> 
-        <div class="item">   
-          <p> link: {{project.link}} </p>
+        <div class="item left">   
+          <p> <a href="{{project.link}}">link</a></p>
         </div> 
         <hr>
         {% endfor %}
         
       </div>
       <div class="container"> 
-       <div class="item"> 
+       <div class="item right"> 
         <h1> Hey, my name is <span class="purple">Kristinn.</span> </h1>
         <h1> I'm a <span class="purple">Computer Science student.</span> <h1>
        </div>  
-      <div class="item"> 
+      <div class="item right"> 
       <h3 class="purple">Web development </h3> 
         {% for skill in webdev %}
               <img class="skill" src="{{skill.image_url}}">
         {% endfor %}
       </div>
-      <div class="item">
+      <div class="item right">
        <h3 class="purple">Software Development </h3>
            {% for skill in software %}            
               <img class="skill" src="{{skill.image_url}}">            
         {% endfor %}
       </div>
-      <div class="item"> 
+      <div class="item right "> 
         <h3 class="purple">
           Database administration 
         </h3>
@@ -63,11 +64,12 @@
             <img class="skill" src="{{skill.image_url}}">
           {% endfor %}
       </div>
-      <a href="#" class="myButton">Get in touch</a>
-      <div class="item center">
-        <img src="{% static 'img/linkedin.png' %}" >
-        <img src="{% static 'img/github.png' %}" >
+      <a href="#" class="myButton" name="answer" value="Show Div" onclick="showDiv()">Get in touch</a>
+      <div class="item center right small_imgs">
+        <a href="https://linkedin.com/in/kristinngodfrey" ><img class="skill" src="{% static 'img/linkedin.png' %}" > </a>
+        <a href="https://github.com/kristinngodfrey"> <img class="skill" src="{% static 'img/github.png' %}" > </a>
       </div>
+      <div class="item" id="welcomeDiv"  style="display:none;" class="answer_list" > You can contact me at: <a>kristinngodfrey@gmail.com</a> or <a>kgg16@hi.is</a></div>
       {% comment %} <div class="aside">
         <img src="{% static 'img/linkedin.png' %}" >
         <img src="{% static 'img/github.png' %}" >

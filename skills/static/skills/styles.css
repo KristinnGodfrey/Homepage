@@ -75,32 +75,22 @@ span.purple {
     
 }
 
-
-
-
-
 .item:nth-child(1) {
     margin-top: 2%;
-    /* position: relative;
-    top: 30%; */
 }
 .item:nth-child(3) {
     width: 45%;
-    /* position: relative;
-    top: 30%; */
 }
 .item:nth-child(4) {
     width: 55%;
-    /* position: relative;
-    top: 30%; */
 }
 .item:nth-child(4) p{
     text-align: right;
+    margin-right:20px;
 }
 .item:nth-child(5) {
     width: 100%;
-    /* position: relative;
-    top: 30%; */
+
 }
 .item:nth-child(6) {
     width: 45%;
@@ -110,7 +100,28 @@ span.purple {
 } 
 .item:nth-child(7) p {
     text-align:right;
-}   
+    margin-right:20px;
+} 
+.item:nth-child(7n+10) {
+    width:45%;
+}
+.item:nth-child(7n+11) {
+    width:55%;
+}
+.item:nth-child(7n+11) p {
+    text-align: right;
+    margin-right:20px;
+}
+.item:nth-child(7n+13) {
+    width:45%;
+}
+.item:nth-child(7n+14) {
+    width:55%;
+}
+.item:nth-child(7n+14) p {
+    text-align:right;
+    margin-right:20px;
+}
 .skill {
     height: 27px;    
     padding-right: 45px;
@@ -174,4 +185,7 @@ hr {
     border: none;
     border-top: 1px solid #aaaaaa;
     border-bottom: 1px solid #ffffff;
- }
+}
+.small_imgs {
+    margin-top: 10px;
+}

@@ -16,12 +16,25 @@
         </div>
         <div class="item bg_purple"> 
           <p> Select a skill by clicking an icon in the box to the right. </p>
+        </div>            
+        {% for project in projects %}
+        <div class="item bg_red">    
+          <p> {{project.name}} </p>
         </div>
-        <div class="item bg_red">        
-          {% for project in projects %}
-            <h1> {{project.name}} </h1>
-          {% endfor %}
-        </div>
+        <div class="item bg_red">   
+          <p> {{project.description}} </p>
+        </div>          
+        <div class="item bg_red">   
+          <img class="big_img" src="{{project.image_url}}">
+        </div> 
+        <div class="item bg_red">   
+          <p> {{project.date}} </p>
+        </div> 
+        <div class="item bg_red">   
+          <p> link: {{project.link}} </p>
+        </div> 
+        {% endfor %}
+        
       </div>
       <div class="container"> 
        <div class="item"> 

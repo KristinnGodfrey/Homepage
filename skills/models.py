@@ -28,7 +28,12 @@ class Project(models.Model):
     description = models.CharField(max_length=200)
     image = models.ImageField(null=True, blank=True, upload_to='img')
     date = models.DateField('date of project')
-    link = models.CharField(max_length=100)
+    link = models.CharField(null=True, blank=True, max_length=100)
 
     def __str__(self):
         return self.name
+
+    @property
+    def image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url

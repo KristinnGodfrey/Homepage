@@ -1,40 +1,63 @@
-  {% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Kristinn's Homepage</title>
     <link rel="stylesheet" href=" {% static 'skills/styles.css' %} ">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
   </head>
   <body>       
     <div class="outside">
-
-    <div class="container">
-      <img src="{% static 'img/computer.svg' %}" class="big_img" >
-    </div>
-    <div class="container"> 
-       <div class="item"> </div> 
+      <div class="container">
+        <div class="item bg_red"> 
+          <h1>Projects</h1>      
+        </div>
+        <div class="item bg_purple"> 
+          <p> Select a skill by clicking an icon in the box to the right. </p>
+        </div>
+        <div class="item bg_red">        
+          {% for project in projects %}
+            <h1> {{project.name}} </h1>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="container"> 
+       <div class="item"> 
+        <h1> Hey, my name is <span class="purple">Kristinn.</span> </h1>
+        <h1> I'm a <span class="purple">Computer Science student.</span> <h1>
+       </div>  
       <div class="item"> 
-        <h3>Web development </h3>
+      <h3 class="purple">Web development </h3> 
         {% for skill in webdev %}
-              {{skill.name}}
-              <img src="{{skill.image}}">
+              <img class="skill" src="{{skill.image_url}}">
         {% endfor %}
       </div>
       <div class="item">
-        <h3>Software Development </h3>
-        {% for skill in software %}            
-              {{skill.name}}
-              <img src="{{skill.image}}">            
+       <h3 class="purple">Software Development </h3>
+           {% for skill in software %}            
+              <img class="skill" src="{{skill.image_url}}">            
         {% endfor %}
       </div>
-      <div class="item">
-        <h3>Database administration </h3>
-        {% for skill in database %}      
-              {{skill.name}}
-              <img src="{{skill.image_url}}">
-        {% endfor %}
+      <div class="item"> 
+        <h3 class="purple">
+          Database administration 
+        </h3>
+          {% for skill in database %}      
+            <img class="skill" src="{{skill.image_url}}">
+          {% endfor %}
       </div>
+      <a href="#" class="myButton">Get in touch</a>
+      <div class="item center">
+        <img src="{% static 'img/linkedin.png' %}" >
+        <img src="{% static 'img/github.png' %}" >
+      </div>
+      {% comment %} <div class="aside">
+        <img src="{% static 'img/linkedin.png' %}" >
+        <img src="{% static 'img/github.png' %}" >
+      </div> {% endcomment %}
+
     </div>
     </div>    
   </body>

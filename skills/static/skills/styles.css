@@ -14,54 +14,124 @@ h1,h2,h3 {
 	vertical-align: baseline;
 }
 
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 42px;
+    color: #838383;
+}
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #838383;
+}
+span.purple {
+    color: #6C63FF;
+}
+
+.purple {
+    color: #6C63FF;
+}
+
 .outside {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.container {
-    width:49%;
-    background-color:pink;
+.container {    
     display: flex;
+    align-content: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.container:nth-of-type(1)  {
+    width:39%;
+    background-color:pink;
+}
+.container:nth-of-type(2)  {
+    width:59%;
+    background-color:white;
+}
+
+
 .container:nth-of-type(1) img{
-    max-width: 75%;
-    padding-left: 5%;
+    max-width: 80%;
+    padding-left: 8%;
     position: relative;
 }
 
-.container:nth-of-type(2)  {
-    background-color: red;
-}
-  
-.item {
-    background-color:grey;
-    width: 48%;
-    height: 100px;
-    margin-bottom: 2%;
-}
 
+
+.item {
+    width: 99%;
+    margin-bottom: 5%;
+    
+}
 
 .item:nth-child(1) {
-    width: 100%;
+    margin-top: 2%;
     /* position: relative;
     top: 30%; */
 }
-.portrait_img {
-    height: 80px;
-    width: 30px;
+.item:nth-child(3) {
+    width: 45%;
+    /* position: relative;
+    top: 30%; */
+}
+.item:nth-child(4) {
+    width: 55%;
+    /* position: relative;
+    top: 30%; */
+}
+.skill {
+    height: 27px;    
+    padding-right: 45px;
+}
+.bg_purple {
+    background-color:purple;
+}
+.bg_red {
+    background-color:red;
 }
 
-.small_img {
-    height: 30px;
-    width: 80px;
+.myButton {
+    background:#2F2E41;	
+	border-radius:35px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#6C63FF;
+    font-family:Roboto;
+    font-weight: 500;
+	font-size:30px;
+	padding:6px 13px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+    margin-left: 30%;
+    width: 30%;
+    text-align: center;
+    
 }
 
-.big_img {
-    height:80%;
-    max-width: 100%;
+.myButton:hover {
+	background:linear-gradient(to bottom, #2F2E41 5%, #2e466e 100%);
+	
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
+.center {
+    margin-left: 33%;
+}
+.gr_small{ 
+    flex-grow: 4;
+}

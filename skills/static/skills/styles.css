@@ -1,5 +1,5 @@
 body {
-    background-color: goldenrod;
+    background-color: white;
 }
 img {
     max-width: 100%;
@@ -53,11 +53,11 @@ span.purple {
 
 .container:nth-of-type(1)  {
     width:39%;
-    background-color:pink;
+    
 }
 .container:nth-of-type(2)  {
     width:59%;
-    background-color:white;
+    
 }
 
 
@@ -75,6 +75,10 @@ span.purple {
     
 }
 
+
+
+
+
 .item:nth-child(1) {
     margin-top: 2%;
     /* position: relative;
@@ -90,6 +94,17 @@ span.purple {
     /* position: relative;
     top: 30%; */
 }
+.item:nth-child(5) {
+    width: 100%;
+    /* position: relative;
+    top: 30%; */
+}
+.item:nth-child(6) {
+    width: 33%;
+}
+.item:nth-child(7) {
+    width: 20%; 
+}  
 .skill {
     height: 27px;    
     padding-right: 45px;
@@ -139,3 +154,18 @@ span.purple {
     height: 300px;    
     padding-right: 45px;
 }
+hr {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 8px auto;
+    height: 0;
+    width: 100%;
+    max-height: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+    border: none;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #ffffff;
+ }

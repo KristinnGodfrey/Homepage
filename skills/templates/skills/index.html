@@ -11,28 +11,30 @@
   <body>       
     <div class="outside">
       <div class="container">
-        <div class="item bg_red"> 
-          <h1>Projects</h1>      
+        <div class="item"> 
+          <h1>Projects Showcase</h1>      
         </div>
-        <div class="item bg_purple"> 
-          <p> Select a skill by clicking an icon in the box to the right. </p>
-        </div>            
+                 
         {% for project in projects %}
-        <div class="item bg_red">    
+        <div class="item"> 
+          <h3 class="center">  {{project.skill_id}} project </h3>
+        </div>   
+        <div class="item">    
           <p> {{project.name}} </p>
         </div>
-        <div class="item bg_red">   
+        <div class="item">   
           <p> {{project.description}} </p>
         </div>          
-        <div class="item bg_red">   
+        <div class="item">   
           <img class="big_img" src="{{project.image_url}}">
         </div> 
-        <div class="item bg_red">   
+        <div class="item">   
           <p> {{project.date}} </p>
         </div> 
-        <div class="item bg_red">   
+        <div class="item">   
           <p> link: {{project.link}} </p>
         </div> 
+        <hr>
         {% endfor %}
         
       </div>

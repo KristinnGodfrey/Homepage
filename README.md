@@ -1,4 +1,4 @@
 # Kristinn's Site
 
-![img](./design-assets/Frontpage.png)
+![img](./media/design-assets/Frontpage.png)
 
